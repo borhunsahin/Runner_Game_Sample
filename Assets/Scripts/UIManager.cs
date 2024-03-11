@@ -10,10 +10,11 @@ public class UIManager : MonoBehaviour
 
     AudioSource audioSource;
 
-    public GameObject mainMenuPanel;
-    public GameObject settingsPanel;
-    public GameObject restartPanel;
+    [SerializeField] GameObject mainMenuPanel;
+    [SerializeField] GameObject settingsPanel;
+    [SerializeField] GameObject restartPanel;
     public GameObject gameOverPanel;
+
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
