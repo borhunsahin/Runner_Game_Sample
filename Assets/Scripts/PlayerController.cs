@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     Animator playerAnimator;
 
     Vector3 direction;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] protected float moveSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float laneChangeDistance;
     private int laneIndex = 0;
