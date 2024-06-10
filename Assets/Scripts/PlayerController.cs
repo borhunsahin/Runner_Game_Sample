@@ -1,5 +1,4 @@
-﻿using DG.Tweening;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,6 +53,7 @@ public class PlayerController : MonoBehaviour
         ApplyGravity();
         if (!gameManager.isPaused)
             ApplyControllers();
+
     }
     private void ApplyMovement()
     {
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
     private void ChangeLane(float laneChangeDistance)
     {
         characterController.enabled = false;
-        transform.Translate(Vector3.right * laneChangeDistance);
+        transform.position += Vector3.right * laneChangeDistance;
         characterController.enabled = true;
 
         if (laneChangeDistance < 0)
